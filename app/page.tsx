@@ -45,29 +45,7 @@ const experiences = [
       "Built user-friendly, responsive web applications using React.js and Tailwind CSS, ensuring compatibility and optimal performance across devices and browsers.",
       "Integrated RESTful APIs using axios in the Login Page and other components, enabling secure data handling and real-time information display within the application."
     ]
-  },
-  // {
-  //   id: "tech-lead-2021",
-  //   role: "Tech Lead",
-  //   company: "Company Name",
-  //   period: "Jul 2021 - Dec 2022",
-  //   responsibilities: [
-  //     "Managed team of 5 developers",
-  //     "Architected scalable solutions",
-  //     "Improved deployment processes",
-  //   ]
-  // },
-  // {
-  //   id: "full-stack-dev-2020",
-  //   role: "Full Stack Developer",
-  //   company: "Company Name",
-  //   period: "Jan 2020 - Jul 2021",
-  //   responsibilities: [
-  //     "Developed full-stack web applications",
-  //     "Implemented RESTful APIs",
-  //     "Optimized database performance",
-  //   ]
-  // },
+  }
 ]
 
 const projects = [
@@ -82,13 +60,7 @@ const projects = [
     description: "The Shopee UI Project is a frontend design replication of the Shopee e-commerce platform, created using only HTML and CSS. It features a clean and responsive layout with sections for navigation, product categories, featured items, and footer links. The design emphasizes visual appeal and user-friendly navigation, simulating a real-world shopping experience.",
     image: project_2_shopee,
     technologies: ["HTML", "CSS"]
-  },
-  // {
-  //   title: "Project Three",
-  //   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-  //   image: "/project3.jpg",
-  //   technologies: ["React", "Redux", "Firebase", "Material UI", "Vercel"]
-  // },
+  }
 ]
 
 
