@@ -106,9 +106,6 @@ export default function Home() {
           Contact
         </Link>
         <Button
-          as="a"
-          href="/Sanjaykumarm-Resume.pdf"
-          target="_blank"
           rel="noopener noreferrer"
           className="rounded-[20px] py-2 md:py-0"
         >
