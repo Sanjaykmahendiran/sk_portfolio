@@ -53,13 +53,15 @@ const projects = [
     title: "Qualifit Nextgen AI Tool Web Application",
     description: "The Qualifit Nextgen AI Tool Web Application is a cutting-edge platform designed to enhance HR and recruitment processes using advanced AI capabilities. It offers features like streamlined scheduling, candidate evaluation, and data-driven decision-making for efficient hiring workflows.",
     image: project_1_qualifit,
-    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"]
+    technologies: ["React", "Next.js", "TypeScript", "Tailwind CSS", "Node.js"],
+    link: "https://www.qualifit.xyz/"
   },
   {
     title: "Shopee UI Project",
     description: "The Shopee UI Project is a frontend design replication of the Shopee e-commerce platform, created using only HTML and CSS. It features a clean and responsive layout with sections for navigation, product categories, featured items, and footer links. The design emphasizes visual appeal and user-friendly navigation, simulating a real-world shopping experience.",
     image: project_2_shopee,
-    technologies: ["HTML", "CSS"]
+    technologies: ["HTML", "CSS"],
+    link: "https://sktech-deploy.vercel.app/"
   }
 ]
 
@@ -105,12 +107,15 @@ export default function Home() {
         <Link href="#contact" className="hover:text-yellow-400 py-2 md:py-0">
           Contact
         </Link>
-        <Button
+        <Button>
+        <a
+          href="https://drive.google.com/file/d/19vhVIRBC7tGya6yw-16NaX5hP3rfDzCV/view?usp=sharing"
+          target="_blank"
           rel="noopener noreferrer"
           className="rounded-[20px] py-2 md:py-0"
         >
           Resume
-        </Button>
+        </a></Button>
       </div>
     </nav>
       <div className="pt-16">
@@ -226,50 +231,60 @@ export default function Home() {
 
         {/* Projects */}
         <section id="work" className="py-20">
-          <div className="container mx-auto px-4">
-            <h2 className="text-2xl font-bold mb-12">Some of the noteworthy projects I have built:</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {projects.map((project) => (
-                <Card key={project.title} className="bg-[#161b22] border-none overflow-hidden text-white">
-                  <div className="relative h-64">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      className="object-cover"
-                      unoptimized
-                    />
-                  </div>
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-4">{project.title}</h3>
-                    <p className="text-gray-400 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                      {project.technologies.map((tech) => (
-                        <Badge key={tech} variant="secondary" >
-                          {tech}
-                        </Badge>
-                      ))}
-                    </div>
-                  </div>
-                </Card>
+  <div className="container mx-auto px-4">
+    <h2 className="text-2xl font-bold mb-12">Some of the noteworthy projects I have built:</h2>
+    <div className="grid md:grid-cols-2 gap-8">
+      {projects.map((project) => (
+        <Card
+          key={project.title}
+          className="bg-[#161b22] border-none overflow-hidden text-white"
+        >
+          <div className="relative h-64">
+            <Image
+              src={project.image}
+              alt={project.title}
+              fill
+              className="object-cover"
+              unoptimized
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-4">{project.title}</h3>
+            <p className="text-gray-400 mb-4">{project.description}</p>
+            <div className="flex flex-wrap gap-2 mb-4">
+              {project.technologies.map((tech) => (
+                <Badge key={tech} variant="secondary">
+                  {tech}
+                </Badge>
               ))}
             </div>
+            <Link href={project.link} target="_blank" rel="noopener noreferrer">
+              <Button
+                size="sm"
+                className="mt-4">
+                View Project
+              </Button>
+            </Link>
           </div>
-        </section>
+        </Card>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         {/* Contact */}
         <section id="contact" className="bg-[#0d1117] py-20">
           <div className="container mx-auto px-4 text-center">
             <h2 className="text-2xl font-bold mb-4">Want to work together?</h2>
             <p className="text-gray-400 mb-8">Feel free to reach out for collaborations or just a friendly hello</p>
-            <div className="flex justify-center items-center gap-2">
+            <div className="flex flex-col md:flex-row justify-center items-center gap-2">
               <Link
                 href="mailto:sanjaykumarmahendiran@gmail.com"
                 className="text-yellow-400 hover:underline"
               >
                 sanjaykumarmahendiran@gmail.com
               </Link>
-              <span className="text-gray-400">•</span>
               <Link
                 href="tel:+916374271140"
                 className="text-yellow-400 hover:underline"
@@ -281,7 +296,7 @@ export default function Home() {
               <Link href="https://github.com/Sanjaykmahendiran" target="_blank">
                 <Image src={github} alt="GitHub" width={24} height={24} />
               </Link>
-              <Link href="www.linkedin.com/in/sanjaykumar-magendiran-b70638234" target="_blank">
+              <Link href="https://www.linkedin.com/in/sanjaykumar-magendiran-b70638234" target="_blank">
                 <Image src={linkdin} alt="LinkedIn" width={24} height={24} />
               </Link>
               <Link href="https://twitter.com" target="_blank">
